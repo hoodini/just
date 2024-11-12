@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    width: 350px;
+    min-height: 450px;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    padding: 1.5rem;
+}
+
+h1 {
+    background: linear-gradient(135deg, #8B5CF6, #6366F1, #EC4899, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+select {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 12px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #1a1a1a;
+    box-shadow: 0 4px 6px rgba(139, 92, 246, 0.1);
+    transition: all 0.2s ease;
+}
+
+select:focus {
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.2);
+}
+
+.time-controls {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 0.5rem;
+    box-shadow: 0 4px 6px rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(115, 0, 255, 0.1);
+}
+
+.time-controls button {
+    background: linear-gradient(135deg, #8B5CF6, #6366F1);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+#timer {
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8B5CF6, #6366F1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.progress-container {
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 12px;
+    height: 6px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    background: linear-gradient(135deg, #8B5CF6, #6366F1);
+    height: 100%;
+    transition: width 1s linear;
+}
+
+.timer-controls button {
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+#startFocus {
+    background: linear-gradient(135deg, #8B5CF6, #6366F1);
+    color: white;
+}
+
+#pauseTimer {
+    background: linear-gradient(135deg, #F59E0B, #F97316);
+    color: white;
+}
+
+#resetTimer {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    color: white;
+}
+
+#motivation {
+    background: rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.quote-content {
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #8B5CF6, #6366F1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: opacity 0.5s ease;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: #7300ff;
+    font-weight: 500;
+}
+
+/* הוספה לקובץ הקיים */
+[data-lucide] {
+    stroke-width: 1.5px;
+    vertical-align: middle;
+}
+
+button [data-lucide] {
+    margin-left: 0.25rem;
+    transition: transform 0.2s ease;
+}
+
+button:hover [data-lucide] {
+    transform: scale(1.1);
+}
+
+#timer [data-lucide] {
+    display: inline-block;
+    vertical-align: middle;
+    stroke: currentColor;
+}
+
+.time-controls [data-lucide] {
+    stroke: currentColor;
+}
+
+#motivation [data-lucide="quote"] {
+    stroke: #8B5CF6;
+    opacity: 0.2;
+}
+
+.time-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    color: #7300ff;
+    background: rgba(115, 0, 255, 0.1);
+}
+
+.time-btn:hover {
+    background: rgba(115, 0, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.time-btn:active {
+    transform: translateY(0);
+}
+
+.time-btn.decrease {
+    color: #ff4757;
+    background: rgba(255, 71, 87, 0.1);
+}
+
+.time-btn.decrease:hover {
+    background: rgba(255, 71, 87, 0.2);
+}
+
+.time-btn.increase {
+    color: #2ed573;
+    background: rgba(46, 213, 115, 0.1);
+}
+
+.time-btn.increase:hover {
+    background: rgba(46, 213, 115, 0.2);
+}
+
+.time-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.75rem;
+    background: rgba(115, 0, 255, 0.1);
+    color: #7300ff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 1px solid rgba(115, 0, 255, 0.2);
+}
+
+.time-display i {
+    margin-left: 0.5rem;
+    opacity: 0.8;
+}
+
+.control-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.control-btn.reset {
+    background: #ff4757;
+    color: white;
+}
+
+.control-btn.pause {
+    background: #ffa502;
+    color: white;
+}
+
+.control-btn.start {
+    background: #7300ff;
+    color: white;
+}
+
+.control-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#motivation {
+    min-height: 60px;
+    color: #7300ff;
+    font-weight: 500;
+}
